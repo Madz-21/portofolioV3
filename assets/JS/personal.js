@@ -1,7 +1,7 @@
 const CFG = {
-    telegramUsername: "yourusername",
-    telegramBotToken: "YOUR_BOT_TOKEN",
-    telegramChatId: "YOUR_CHAT_ID",
+    telegramUsername: "@ReportAntreanLM_bot",
+    telegramBotToken: "8140749615:AAFZMqBCktRVegGHWGL0L5_EBfx2oNapNmg",
+    telegramChatId: "5233555196",
 };
 
 // Loader — fires on DOM ready, NOT window.load (which waits for external CSS/fonts)
@@ -40,12 +40,15 @@ function spawnParticles() {
 }
 
 const phrases = [
-    "Python & Pandas",
+    "Python",
     "Telegram Bots",
     "React & Node.js",
-    "SQL Analytics",
+    "Excel",
+    "Data Analyst",
     "GPT APIs",
-    "Data Pipelines",
+    "Claude",
+    "Web Development",
+    "Chatbot & Automation",
 ];
 let pi = 0,
     ci = 0,
@@ -289,7 +292,49 @@ function toggleMoreCerts() {
     txt.textContent = certExpanded ? "Show Less" : "Show All Certificates";
 }
 
-/* ── CERT LIGHTBOX ── */
+/* ── PROJECT LIGHTBOX ── */
+function openProj(card) {
+    const title = card.dataset.title || "";
+    const desc = card.dataset.desc || "";
+    const img = card.dataset.img || "";
+    const linkCode = card.dataset.linkCode || "";
+    const linkCodeLabel = card.dataset.linkCodeLabel || "Code";
+    const linkDemo = card.dataset.linkDemo || "";
+    const linkDemoLabel = card.dataset.linkDemoLabel || "Live";
+
+    // Collect tags from the card's .proj-tags
+    const tagsHtml = card.querySelector(".proj-tags") ? card.querySelector(".proj-tags").innerHTML : "";
+
+    const inner = document.getElementById("projLbInner");
+    const imgTag = img
+        ? `<img class="proj-lb-img" src="${img}" alt="${title}" loading="lazy"/>`
+        : `<div class="proj-lb-ph">${card.querySelector(".proj-thumb i:first-child") ? card.querySelector(".proj-thumb i:first-child").outerHTML : '<i class="fa-solid fa-code"></i>'}</div>`;
+
+    const links = [
+        linkCode ? `<a href="${linkCode}" target="_blank" class="btn btn-out" style="font-size:.82rem;padding:9px 18px;"><i class="fa-brands fa-github"></i> ${linkCodeLabel}</a>` : "",
+        linkDemo ? `<a href="${linkDemo}" target="_blank" class="btn btn-pri" style="font-size:.82rem;padding:9px 18px;"><i class="fa-solid fa-arrow-up-right-from-square"></i> ${linkDemoLabel}</a>` : "",
+    ].join("");
+
+    inner.innerHTML = `
+    ${imgTag}
+    <div class="proj-lb-body">
+      <div class="proj-lb-tags">${tagsHtml}</div>
+      <div class="proj-lb-title">${title}</div>
+      <p class="proj-lb-desc">${desc}</p>
+      <div class="proj-lb-links">${links}</div>
+    </div>`;
+    document.getElementById("projLightbox").classList.add("open");
+    document.body.style.overflow = "hidden";
+}
+function closeProj() {
+    document.getElementById("projLightbox").classList.remove("open");
+    document.body.style.overflow = "";
+}
+function closeProjIfBg(e) {
+    if (e.target === document.getElementById("projLightbox")) closeProj();
+}
+
+
 function openCert(card) {
     const name = card.dataset.name || "";
     const issuer = card.dataset.issuer || "";
@@ -317,7 +362,7 @@ function closeCertIfBg(e) {
     if (e.target === document.getElementById("certLightbox")) closeCert();
 }
 document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") closeCert();
+    if (e.key === "Escape") { closeCert(); closeProj(); }
 });
 
 document.querySelectorAll(".proj-card").forEach((c) => {
