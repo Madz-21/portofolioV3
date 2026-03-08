@@ -4,7 +4,7 @@
 
 ![Portfolio Preview](./assets/images/porto.png)
 
-[![Live Demo](https://ahmadsdev.vercel.app)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Visit%20Site-3b8a8c?style=for-the-badge&logo=vercel)](https://ahmadsdev.vercel.app/)
 [![License](https://img.shields.io/badge/License-MIT-c47b2b?style=for-the-badge)](./LICENSE)
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
 [![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
@@ -62,7 +62,7 @@ portfolio/
 │   │   └── personal.js     # All scripts
 │   ├── images/             # Project screenshots & profile photo
 │   └── PDF/
-│       └── Ahmad Sahl Pahlevi - CV.pdf
+│       └── My CV.pdf
 └── README.md
 ```
 
@@ -73,8 +73,8 @@ portfolio/
 No build step required. Just clone and open.
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/YOUR_REPO.git
-cd YOUR_REPO
+git clone https://github.com/Madz-21/portofolioV3.git
+cd portofolioV3
 # Open index.html in your browser
 ```
 
@@ -108,9 +108,7 @@ const CFG = {
 
 | Platform | Link |
 |---|---|
-| 🌐 Portfolio | [ahmadsp-web.vercel.app](https://ahmadsp-web.vercel.app/) |
-| 💼 LinkedIn | [linkedin.com/in/ahmad-sahl](https://linkedin.com/in/ahmad-sahl) |
-| 📱 Telegram | [@ReportAntreanLM_bot](https://t.me/ReportAntreanLM_bot) |
+| 🌐 Portfolio | [ahmadsp-web.vercel.app](https://ahmadsdev.vercel.app/) |
 | 📍 Location | Jakarta, Indonesia |
 
 ---
