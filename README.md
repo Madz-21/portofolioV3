@@ -120,5 +120,5 @@ This project is licensed under the **MIT License** — see the [LICENSE](./LICEN
 ---
 
 <div align="center">
-  Made with ❤️ by <strong>Ahmad Sahl Pahlevi</strong>
+  Made with ❤️ by <strong>Ahmad SP</strong>
 </div>
