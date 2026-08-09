@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![Portfolio Preview](./assets/images/porto.png)
+![Portfolio Preview](./assets/images/Porto.png)
 
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-Visit%20Site-3b8a8c?style=for-the-badge&logo=vercel)](https://ahmadsdev.vercel.app/)
 [![License](https://img.shields.io/badge/License-MIT-c47b2b?style=for-the-badge)](./LICENSE)
