@@ -41,14 +41,11 @@ function spawnParticles() {
 
 const phrases = [
     "Python",
-    "Telegram Bots",
-    "React & Node.js",
     "Excel",
+    "Data Cleaning",
     "Data Analyst",
-    "GPT APIs",
-    "Claude",
-    "Web Development",
-    "Chatbot & Automation",
+    "Web Dev",
+    "Data Statistics"
 ];
 let pi = 0,
     ci = 0,
@@ -226,7 +223,7 @@ async function sendTG() {
         } else throw new Error(d.description);
     } catch (e) {
         st.className = "err";
-        st.innerHTML = `Sending failed. <a href="https://t.me/${CFG.telegramUsername}" target="_blank" style="color:var(--accent)">Try Telegram directly &rarr;</a>`;
+        st.innerHTML = `Sending messages to Telegram is under maintenance. <a href="https://t.me/supernova0101" target="_blank" style="color:var(--accent)">Try Telegram directly &rarr;</a>`;
     } finally {
         btn.disabled = false;
         btn.innerHTML =
